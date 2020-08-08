@@ -48,6 +48,12 @@ Route::post('/newgallery/{user_id}', 'GalleryController@api_store');
 
 Route::post('/newpainting/{user_id}', 'PaintingController@api_store');
 
+Route::post('/galleryupvote/{user_id}/{gallery_id}', 'GalleryVoteController@api_manageUpvote');
+Route::post('/gallerydownvote/{user_id}/{gallery_id}', 'GalleryVoteController@api_manageDownvote');
+
+Route::post('/paintingupvote/{user_id}/{painting_id}', 'PaintingVoteController@api_manageUpvote');
+Route::post('/paintingdownvote/{user_id}/{painting_id}', 'PaintingVoteController@api_manageDownvote');
+
 
 
 
