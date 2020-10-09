@@ -9,6 +9,12 @@
             <div class="profile-content">
                 <h1>{{$user->name}}</h1>
             </div>
+            <div class="card" style="width: 60%; margin: auto;margin-bottom: 30px;">
+                <div class="card-body">
+                BIO : {{ $user->bio }}
+                <a href="/modify_profile/{{ $user->id }}">Click me</a>
+                </div>
+            </div>
 
                             @auth
                             @if(Auth::user()->id != $user->id)
@@ -66,52 +72,5 @@
     </div>
 </div>
 
-<br><br>
-
-@auth
-@if(Auth::user()->id == $user->id)
-<div class="container margin-bottom-40">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header text-center">Modify Profile Informations</div>
-
-                <div class="card-body">
-                    @if ($message = Session::get('success'))
-                    <div class="form-group">
-                        <div class="alert alert-success alert-block">
-                            <button type="button" class="close" data-dismiss="alert">×</button>
-                            <strong>{{ session('success') }}</strong>
-                        </div>
-                    </div>
-                    @endif
-                    <form action="/modify_profile/{{$user->id}}" method="POST" enctype="multipart/form-data">
-                        @csrf
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Profile Name</label>
-                            <input type="text" value="{{$user->name}}" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Profile Email</label>
-                            <input type="text" value="{{$user->email}}" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="exampleFormControlFile1">Profile Picture</label>
-                            <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
-                        </div>
-
-
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endauth
-@endif
 
 @endsection

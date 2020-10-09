@@ -8,6 +8,7 @@ use App\Gallery;
 use App\ProfileVote;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -29,6 +30,17 @@ class ProfileController extends Controller
         return view('profile', ['user' => $user, 'galleries' => $galleries, 'upvotes' => $upvotes, 'downvotes' => $downvotes]);
     }
 
+    public function modifyProfile($id)
+    {
+        $user = User::findOrFail($id);
+
+        if(Auth::user() != $user){
+            return back();
+        }
+
+        return view('modify_profile', ['user' => $user]);
+    }
+
     public function update($id, Request $request)
     {
         $user = User::findOrFail($id);
@@ -36,6 +48,7 @@ class ProfileController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required',
+            'bio' => 'required',
             'image' => 'image',
         ]);
 
@@ -46,11 +59,12 @@ class ProfileController extends Controller
             $extension = $request->file('image')->getClientOriginalExtension();
             $filename = preg_replace('/\s+/', '', $filename);
             $fileNameToStore = $filename .'_'.time().'.'.$extension;
-            $path = $request->file('image')->storeAs('public/profile', $fileNameToStore);
+            $path = $request->file('image')->storeAs('public/public/profile', $fileNameToStore);
             $user->image = $fileNameToStore;
         }
 
         $user->name = request('name');
+        $user->bio = request('bio');
         $user->email = request('email');
         $user->save();
 
@@ -136,7 +150,7 @@ class ProfileController extends Controller
             $extension = $request->file('image')->getClientOriginalExtension();
             $filename = preg_replace('/\s+/', '', $filename);
             $fileNameToStore = $filename .'_'.time().'.'.$extension;
-            $path = $request->file('image')->storeAs('public/profile', $fileNameToStore);
+            $path = $request->file('image')->storeAs('public/public/profile', $fileNameToStore);
             $user->image = $fileNameToStore;
         }else{
             return response()->json(['status' => 'bad', 'error' => 'No image detected']);

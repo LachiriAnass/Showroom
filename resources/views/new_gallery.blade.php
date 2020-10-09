@@ -16,6 +16,16 @@
                         </div>
                     </div>
                     @endif
+                    @if ($errors->any())
+                    @foreach ($errors->all() as $error)
+                    <div class="form-group">
+                        <div class="alert alert-success alert-block">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>{{ $error }}</strong>
+                        </div>
+                    </div>
+                    @endforeach
+                    @endif
                     <form action="/create_gallery" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">

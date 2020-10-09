@@ -25,6 +25,7 @@ Route::get('/gallery/{gallery_id}', 'GalleryController@show');
 Route::get('/galleries', 'GalleryController@index')->middleware('auth');
 Route::get('/create_gallery', 'GalleryController@newGallery')->middleware('auth');
 Route::post('/create_gallery', 'GalleryController@store')->middleware('auth');
+Route::post('/delete_gallery/{gallery_id}', 'GalleryController@destroy')->middleware('auth');
 
 
 Route::get('/painting/{painting_id}', 'PaintingController@show');
@@ -33,6 +34,7 @@ Route::post('/delete_painting/{painting_id}', 'PaintingController@destroy')->mid
 Route::post('/sold_painting/{painting_id}', 'PaintingController@modify')->middleware('auth');
 
 Route::get('/profile/{user_id}', 'ProfileController@show');
+Route::get('/modify_profile/{user_id}', 'ProfileController@modifyProfile');
 Route::post('/modify_profile/{user_id}', 'ProfileController@update')->middleware('auth');
 
 Route::get('/search', 'SearchController@index');

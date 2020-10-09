@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Gallery;
 use App\Painting;
 use App\User;
+use App\GalleryVote;
 
 class GalleryController extends Controller
 {
@@ -41,7 +42,7 @@ class GalleryController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'description' => 'required',
-            'image' => 'image',
+            'image' => 'image|required',
         ]);
 
         $gallery = new Gallery();
@@ -52,7 +53,7 @@ class GalleryController extends Controller
             $extension = $request->file('image')->getClientOriginalExtension();
             $filename = preg_replace('/\s+/', '', $filename);
             $fileNameToStore = $filename .'_'.time().'.'.$extension;
-            $path = $request->file('image')->storeAs('public/gallery', $fileNameToStore);
+            $path = $request->file('image')->storeAs('public/public/gallery', $fileNameToStore);
             $gallery->image = $fileNameToStore;
         }
 
@@ -64,6 +65,18 @@ class GalleryController extends Controller
 
         return back()
             ->with('success','You have successfully created a gallery.');
+    }
+
+    public function destroy($id)
+    {
+
+        $gallery = Gallery::findOrFail($id);
+        $gallery->paintings();
+        GalleryVote::where('gallery_id', '=', $id)->delete();
+        Painting::where('gallery_id', '=', $id)->delete();
+        $gallery->delete();
+
+        return redirect("/");
     }
 
 
@@ -110,7 +123,7 @@ class GalleryController extends Controller
             $extension = $request->file('image')->getClientOriginalExtension();
             $filename = preg_replace('/\s+/', '', $filename);
             $fileNameToStore = $filename .'_'.time().'.'.$extension;
-            $path = $request->file('image')->storeAs('public/gallery', $fileNameToStore);
+            $path = $request->file('image')->storeAs('public/public/gallery', $fileNameToStore);
             $gallery->image = $fileNameToStore;
         }else{
             return response()->json(['status' => 'bad', 'error' => 'No image detected']);

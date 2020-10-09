@@ -60,6 +60,16 @@
                             {{ $gallery->description }}
                             </p>
 
+                            @if(Auth::user()->id == $gallery->user_id)
+
+                            <a href=""  class="btn btn-delete float-right" style="margin-right: 20px;margin-left: 20px;"
+                                onclick="if(confirm('Are you sure?')){event.preventDefault();
+                                                        document.getElementById('gallery-delete-form').submit();}">Delete</a>
+                            <form id="gallery-delete-form" action="/delete_gallery/{{ $gallery->id }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                            @endif
+
                         </div>
                     </div>
                 </div>
@@ -107,6 +117,16 @@
                             <strong>{{ session('success') }}</strong>
                         </div>
                     </div>
+                    @endif
+                    @if ($errors->any())
+                    @foreach ($errors->all() as $error)
+                    <div class="form-group">
+                        <div class="alert alert-success alert-block">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>{{ $error }}</strong>
+                        </div>
+                    </div>
+                    @endforeach
                     @endif
                     <form action="/create_painting" method="POST" enctype="multipart/form-data">
                     @csrf

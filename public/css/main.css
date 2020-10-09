@@ -1,3 +1,4 @@
+
 .margin-left-40{
     margin-left: 40px;
 }
@@ -51,10 +52,6 @@ margin-right: 20px;
     background-color: #fff;
     border-radius: 50px 50px 50px 50px;
     margin-left: 20px;
-}
-
-.btn, .btn:focus, .btn:hover{
-    border-radius: 50px 50px 50px 50px;
 }
 
 

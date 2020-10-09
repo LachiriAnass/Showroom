@@ -130,15 +130,6 @@ class UserSeeder extends Seeder
 
         $faker = \Faker\Factory::create();
 
-        DB::table('users')->insert([
-            'name' => 'Admin',
-            'email' => "admin@gmail.com",
-            'password' => Hash::make('admin'),
-            'votes_average' => 0,
-            'created_at' => new DateTime,
-            'updated_at' => null,
-        ]);
-
         for($i=0; $i<=20; $i++):
 
                 DB::table('users')->insert([

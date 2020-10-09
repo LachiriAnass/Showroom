@@ -32,7 +32,7 @@ class PaintingController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'description' => 'required',
-            'image' => 'image',
+            'image' => 'image|required',
             'gallery_id' => 'required',
             'for_sale' => 'required'
         ]);
@@ -45,7 +45,7 @@ class PaintingController extends Controller
             $extension = $request->file('image')->getClientOriginalExtension();
             $filename = preg_replace('/\s+/', '', $filename);
             $fileNameToStore = $filename .'_'.time().'.'.$extension;
-            $path = $request->file('image')->storeAs('public/painting', $fileNameToStore);
+            $path = $request->file('image')->storeAs('public/public/painting', $fileNameToStore);
             $painting->image = $fileNameToStore;
         }
 
@@ -126,7 +126,7 @@ class PaintingController extends Controller
             $extension = $request->file('image')->getClientOriginalExtension();
             $filename = preg_replace('/\s+/', '', $filename);
             $fileNameToStore = $filename .'_'.time().'.'.$extension;
-            $path = $request->file('image')->storeAs('public/painting', $fileNameToStore);
+            $path = $request->file('image')->storeAs('public/public/painting', $fileNameToStore);
             $painting->image = $fileNameToStore;
         }else{
             return response()->json(['status' => 'bad', 'error' => 'No image detected']);

@@ -74,7 +74,7 @@
 
     #site-title{
         font-family: "Snell Roundhand, cursive";
-        font-size: 25px; 
+        font-size: 25px;
     }
 
     .header-links {
@@ -84,7 +84,7 @@
 
 
 
-    
+
 
     /*@media only screen and (min-width: 768px) and (max-width: 991px){
     	.md-mb-30{
@@ -99,7 +99,7 @@
 
     	.footer-top{
     		padding: 50px 0;
-    		
+
     	}
     }*/
 
@@ -149,7 +149,7 @@
                             </form>
                         -->
                             @auth
-                            <a href="/create_painting" class="btn btn-primary new_painting">Upload</a>
+                            <a href="/create_gallery" class="btn btn-primary new_painting">Upload</a>
                             @endauth
                         @guest
                             <li class="nav-item">
@@ -168,7 +168,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a href="/profile/{{ Auth::user()->id }}" class="dropdown-item header-links">My Profile</a>
-                                <a href="/galleries" class="dropdown-item header-links">My Paintings</a>
+                                <a href="/galleries" class="dropdown-item header-links">My Galleries</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -206,9 +206,9 @@
     				<div class="col-md-4 col-sm-12">
     					<h5>Follow Us</h5>
     					<div class="footer-links">
-    						<a href="#"><img src="imgs/facebook.png"></a>
-    						<a href="#"><img src="imgs/linkedin.png"></a>
-    					</div>	
+    						<a href="#"><img src="/storage/public/imgs/facebook.png"></a>
+    						<a href="#"><img src="/storage/public/imgs/linkedin.png"></a>
+    					</div>
     				</div>
     				<div class="col-md-4 col-sm-12">
     					<h5>About</h5>
@@ -216,7 +216,7 @@
     				</div>
 
     			</div>
-    		</div>	
+    		</div>
     	</div>
     </footer>
 </div>
