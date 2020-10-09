@@ -5,7 +5,7 @@
     <h1 class="text-center">My Galleries</h1><br><br>
     <div class="row">
         @forelse($galleries as $gallery)
-        <div class="col-md-4 painting-card">
+        <div class="col-md-3 painting-card">
             <div class="card" style="width: 18rem; margin: auto;">
                 <img src="/storage/public/gallery/{{ $gallery->image }}" class="card-img-top card-painting-img" alt="{{ $gallery->title }}">
                 <div class="card-body text-center">
