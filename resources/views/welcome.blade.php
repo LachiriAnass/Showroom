@@ -8,7 +8,7 @@
         <h1>Showcase</h1>
         <div class="description">
         <p>Sell and showcase your paintings </p>
-        <button type="button" class="welcome-buttons">Get started</button>
+        <a href="{{ route('register') }}" ><button type="button" class="btn btn-warning welcome-buttons">Get started</button></a>
         </div>
         <img src="imgs/paintings1.jpg" class="paintings s1" />
       </section>
@@ -16,7 +16,7 @@
         <h1>Discover</h1>
         <div class="description">
         <p>Discover new paintings to buy</p>
-        <button type="button" class="welcome-buttons">Explore</button>
+        <a href="/explore"><button type="button" class="btn btn-info welcome-buttons">Explore</button></a>
         </div>
         <img src="imgs/paintings2.jpg" class="paintings s2" />
       </section>

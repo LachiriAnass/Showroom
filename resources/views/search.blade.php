@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.different_header')
 
 @section('content')
 <div class="container margin-top-50 margin-bottom-40">

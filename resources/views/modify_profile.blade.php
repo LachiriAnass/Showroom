@@ -3,7 +3,7 @@
 @section('content')
 <div class="container profile-container" style="margin-top: 120px;">
 
-    <div class="card text-center">
+    <div class="card text-center card-style">
         <div class="card-body">
             <img class="profile-img" src="/storage/public/profile/{{$user->image}}" alt="">
             <div class="profile-content">

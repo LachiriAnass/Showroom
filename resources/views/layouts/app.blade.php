@@ -23,87 +23,13 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
 
-<style>
-
-
-	html {
-    position: relative;
-    min-height: 100%;
-	}
-
-	body {
-	    margin: 0 0 150px;
-	    /* bottom = footer height */
-	    padding: 25px;
-	}
-
-    h5 {
-    	color: #ff5b3f;
-    	font-size: 16px;
-    	font-family: "proxima-nova", Arial, sans;
-    	text-transform: uppercase;
-    }
-
-    .footer-top {
-    	background : #111;
-    	padding: 50px 0;
-    	position: absolute;
-    	left: 0;
-    	bottom: 0;
-    	height: 150px;
-    	width: 100%;
-    	overflow: hidden;
-    }
-
-
-    #about-p {
-    	color: #fff;
-    }
-
-    .footer-links{
-    	text-decoration: none;
-    	font-size: 16px;
-    	color: white;
-    }
-
-
-    a {
-        padding-right: 5px;
-    }
-
-
-    #site-title{
-        font-family: "Snell Roundhand, cursive";
-        font-size: 25px;
-    }
-
-    .header-links {
-        font-size: 14px;
-        text-transform: uppercase;
-    }
 
 
 
 
 
-    /*@media only screen and (min-width: 768px) and (max-width: 991px){
-    	.md-mb-30{
-    		margin-bottom : 30px;
-    	}
-    }
 
-    @media only screen and (max-width: 767px){
-    	.sm-mb-30{
-    		margin-bottom: 30px;
-    	}
 
-    	.footer-top{
-    		padding: 50px 0;
-
-    	}
-    }*/
-
-</style>
 
 </head>
 <body>
@@ -149,7 +75,7 @@
                             </form>
                         -->
                             @auth
-                            <a href="/create_gallery" class="btn btn-primary new_painting">Upload</a>
+                            <a href="/create_gallery" class="btn btn-primary new_gallery">Upload</a>
                             @endauth
                         @guest
                             <li class="nav-item">

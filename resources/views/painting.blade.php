@@ -4,7 +4,7 @@
 <div class="container margin-top-50 margin-bottom-40">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card card-style">
                 <div class="card-header text-center">Title : {{ $painting->title }}</div>
                 <img src="/storage/public/painting/{{ $painting->image }}" class="card-img-top" alt="{{ $painting->title }}">
 
