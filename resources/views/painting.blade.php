@@ -111,17 +111,17 @@
                         @else
 
                             @if($painting->for_sale)
-                                <a href="/painting_sold/{{$painting->id}}"  class="btn btn-delete float-right" style="margin-right: 20px;margin-left: 20px;"
+                                <button class="btn btn-delete float-right" style="margin-right: 20px;margin-left: 20px;"
                                         onclick="if(confirm('Are you sure?')){event.preventDefault();
-                                                                document.getElementById('painting-delete-form').submit();}">Mark as sold</a>
+                                                                document.getElementById('painting-delete-form').submit();}">Mark as sold</button>
                                 <form id="painting-delete-form" action="/sold_painting/{{ $painting->id }}" method="POST" style="display: none;">
                                                     @csrf
                                                 </form>
                             @endif
 
-                        <a href="/painting/{{$painting->id}}"  class="btn btn-delete float-right" style="margin-right: 20px;margin-left: 20px;"
+                        <button class="btn btn-delete float-right" style="margin-right: 20px;margin-left: 20px;"
                                 onclick="if(confirm('Are you sure?')){event.preventDefault();
-                                                        document.getElementById('painting-delete-form').submit();}">Delete</a>
+                                                        document.getElementById('painting-delete-form').submit();}">Delete</button>
                         <form id="painting-delete-form" action="/delete_painting/{{ $painting->id }}" method="POST" style="display: none;">
                                             @csrf
                                         </form>

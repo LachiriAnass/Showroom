@@ -44,7 +44,7 @@
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Bio</label>
-                                        <textarea type="text" value="{{$user->bio}}" name="bio" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></textarea>
+                                        <textarea type="text" name="bio" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">{{$user->bio}}</textarea>
                                     </div>
 
                                     <div class="form-group">

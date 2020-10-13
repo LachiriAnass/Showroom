@@ -60,15 +60,17 @@
                             {{ $gallery->description }}
                             </p>
 
+                            @auth
                             @if(Auth::user()->id == $gallery->user_id)
 
-                            <a href=""  class="btn btn-delete float-right" style="margin-right: 20px;margin-left: 20px;"
-                                onclick="if(confirm('Are you sure?')){event.preventDefault();
-                                                        document.getElementById('gallery-delete-form').submit();}">Delete</a>
+                            <button class="btn btn-delete float-right" style="margin-right: 20px;margin-left: 20px;"
+                            onclick="if(confirm('Are you sure?')){event.preventDefault();
+                                                        document.getElementById('gallery-delete-form').submit();}">Delete</button>
                             <form id="gallery-delete-form" action="/delete_gallery/{{ $gallery->id }}" method="POST" style="display: none;">
                                             @csrf
                                         </form>
                             @endif
+                            @endauth
 
                         </div>
                     </div>
@@ -93,9 +95,24 @@
             </div>
         </div>
         @empty
+        @auth
+        @if(Auth::user()->id == $gallery->user_id)
         <div class="alert alert-primary text-center" role="alert" style="width:100%;">
             You don't have any painting yet!! Fill and submit the form below to add a new one.
         </div>
+        @else
+        <div class="alert alert-primary text-center" role="alert" style="width:100%;">
+            There are no paintings in this gallery yet!!
+        </div>
+        @endif
+        @endauth
+
+        @guest
+        <div class="alert alert-primary text-center" role="alert" style="width:100%;">
+            There are no paintings in this gallery yet!!
+        </div>
+        @endguest
+
         @endforelse
     </div>
 </div>

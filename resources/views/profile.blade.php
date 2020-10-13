@@ -12,7 +12,11 @@
             <div class="card" style="width: 60%; margin: auto;margin-bottom: 30px;">
                 <div class="card-body">
                 <span class="bio-section">{{ $user->bio }}</span>
-                <a href="/modify_profile/{{ $user->id }}">Modify</a>
+                @auth
+                @if(Auth::user()->id == $user->id)
+                    <a href="/modify_profile/{{ $user->id }}">Modify</a>
+                @endif
+                @endauth
                 </div>
             </div>
 

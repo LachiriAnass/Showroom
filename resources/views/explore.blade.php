@@ -7,7 +7,7 @@
         @forelse($latest_galleries as $gallery)
         <div class="col-md-3 painting-card">
             <div class="card" style="width: 18rem; margin: auto;">
-                <img src="/storage/gallery/{{ $gallery->image }}" class="card-img-top card-painting-img" alt="{{ $gallery->title }}">
+                <img src="/storage/public/gallery/{{ $gallery->image }}" class="card-img-top card-painting-img" alt="{{ $gallery->title }}">
                 <div class="card-body text-center">
                     <h5 class="card-title">{{ $gallery->title }}</h5>
                     <a href="/gallery/{{$gallery->id}}" class="btn btn-primary">See Gallery</a>
@@ -27,7 +27,7 @@
         @forelse($most_rated_galleries as $gallery)
         <div class="col-md-3 painting-card">
             <div class="card" style="width: 18rem; margin: auto;">
-                <img src="/storage/gallery/{{ $gallery->image }}" class="card-img-top card-painting-img" alt="{{ $gallery->title }}">
+                <img src="/storage/public/gallery/{{ $gallery->image }}" class="card-img-top card-painting-img" alt="{{ $gallery->title }}">
                 <div class="card-body text-center">
                     <h5 class="card-title">{{ $gallery->title }}</h5>
                     <a href="/gallery/{{$gallery->id}}" class="btn btn-primary">See Gallery</a>
@@ -47,7 +47,7 @@
         @forelse($most_rated_paintings as $painting)
         <div class="col-md-3 painting-card">
             <div class="card" style="width: 18rem; margin: auto;">
-                <img src="/storage/painting/{{ $painting->image }}" class="card-img-top card-painting-img" alt="{{ $painting->title }}">
+                <img src="/storage/public/painting/{{ $painting->image }}" class="card-img-top card-painting-img" alt="{{ $painting->title }}">
                 <div class="card-body text-center">
                     <h5 class="card-title">{{ $painting->title }}</h5>
                     <a href="/painting/{{$painting->id}}" class="btn btn-primary">See the painting</a>
@@ -67,7 +67,7 @@
         @forelse($most_rated_artists as $artist)
         <div class="col-md-3 painting-card">
             <div class="card" style="width: 18rem; margin: auto;">
-                <img src="/storage/profile/{{ $artist->image }}" class="card-img-top card-painting-img" alt="{{ $artist->name }}">
+                <img src="/storage/public/profile/{{ $artist->image }}" class="card-img-top card-painting-img" alt="{{ $artist->name }}">
                 <div class="card-body text-center">
                     <h5 class="card-title">{{ $artist->name }}</h5>
                     <a href="/profile/{{$artist->id}}" class="btn btn-primary">Go To This Profile</a>
