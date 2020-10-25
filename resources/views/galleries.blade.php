@@ -3,10 +3,10 @@
 @section('content')
 <div class="container margin-top-50">
     <h1 class="text-center">My Galleries</h1><br><br>
-    <div class="row">
+    <div class="row no-gutters">
         @forelse($galleries as $gallery)
         <div class="col-md-3 painting-card">
-            <div class="card" style="width: 18rem; margin: auto;">
+            <div class="card" style="margin: auto;">
                 <img src="/storage/public/gallery/{{ $gallery->image }}" class="card-img-top card-painting-img" alt="{{ $gallery->title }}">
                 <div class="card-body text-center">
                     <h5 class="card-title">{{ $gallery->title }}</h5>

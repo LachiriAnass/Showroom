@@ -4,7 +4,7 @@
 
 <div class="container margin-top-50 margin-bottom-40">
     <h2 class="text-center">Explore</h2><br><br>
-    <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
+    <ul class="nav nav-pills nav-fill" style="width: 100%;" id="myTab" role="tablist">
         <li class="nav-item">
             <a class="nav-link search-nav-link active" id="latest-galleries-tab" href="#latest-galleries" data-toggle="tab" role="tab" aria-controls="latest-galleries" aria-selected="true">Latest Galleries</a>
         </li>
@@ -21,10 +21,10 @@
     <br>
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="latest-galleries" role="tabpanel" aria-labelledby="latest-galleries-tab">
-            <div class="row">
+            <div class="row no-gutters">
                 @forelse($latest_galleries as $gallery)
                 <div class="col-md-3 painting-card">
-                    <div class="card" style="width: 18rem; margin: auto;">
+                    <div class="card" style=" margin: auto;">
                         <img src="/storage/public/gallery/{{ $gallery->image }}" class="card-img-top card-painting-img" alt="{{ $gallery->title }}">
                         <div class="card-body text-center">
                             <h5 class="card-title">{{ $gallery->title }}</h5>
@@ -41,10 +41,10 @@
         </div>
 
         <div class="tab-pane fade" id="rated-galleries" role="tabpanel" aria-labelledby="rated-galleries-tab">
-            <div class="row">
+            <div class="row no-gutters">
                 @forelse($most_rated_galleries as $gallery)
                 <div class="col-md-3 painting-card">
-                    <div class="card" style="width: 18rem; margin: auto;">
+                    <div class="card" style="margin: auto;">
                         <img src="/storage/public/gallery/{{ $gallery->image }}" class="card-img-top card-painting-img" alt="{{ $gallery->title }}">
                         <div class="card-body text-center">
                             <h5 class="card-title">{{ $gallery->title }}</h5>
@@ -61,10 +61,10 @@
         </div>
 
         <div class="tab-pane fade" id="rated-paintings" role="tabpanel" aria-labelledby="rated-paintings-tab">
-            <div class="row">
+            <div class="row no-gutters">
                 @forelse($most_rated_paintings as $painting)
                 <div class="col-md-3 painting-card">
-                    <div class="card" style="width: 18rem; margin: auto;">
+                    <div class="card" style="margin: auto;">
                         <img src="/storage/public/painting/{{ $painting->image }}" class="card-img-top card-painting-img" alt="{{ $painting->title }}">
                         <div class="card-body text-center">
                             <h5 class="card-title">{{ $painting->title }}</h5>
@@ -81,10 +81,10 @@
         </div>
 
         <div class="tab-pane fade" id="rated-artists" role="tabpanel" aria-labelledby="rated-artists-tab">
-            <div class="row">
+            <div class="row no-gutters">
                 @forelse($most_rated_artists as $artist)
                 <div class="col-md-3 painting-card">
-                    <div class="card" style="width: 18rem; margin: auto;">
+                    <div class="card" style="margin: auto;">
                         <img src="/storage/public/profile/{{ $artist->image }}" class="card-img-top card-painting-img" alt="{{ $artist->name }}">
                         <div class="card-body text-center">
                             <h5 class="card-title">{{ $artist->name }}</h5>
