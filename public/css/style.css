@@ -4,25 +4,6 @@
   box-sizing: border-box;
 }
 
-.s1 {
-  background-color: #de822e;
-}
-.section h1 {
-  font-size: 64px;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  background: linear-gradient(to left, #000000, #55007f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.s2 {
-  background: linear-gradient(to left top, #00b2aa, #36edf9);
-}
-
-
 .paintings {
   height: 60%;
   position: absolute;
@@ -143,3 +124,58 @@ body {
 
     	}
     }*/
+
+
+
+/**************** Main page sections *******************************/
+
+#fullPage .section h1{
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 90px;
+    color: white !important;
+    margin-bottom: 150px;
+}
+
+.section .description{
+    margin-left: 150px;
+    color: white;
+    font-size: 30px;
+}
+
+.section .description button{
+    border: 1px solid white;
+    background: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+.section .description button:hover{
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+
+.s1{
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url("{{ asset('imgs/section1.jpg') }}");
+    background-size: cover;
+}
+
+.s2{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('imgs/section2.jpg');
+    background-size: cover;
+}
+
+.s3{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) ), url('imgs/section3.jpg');
+    background-size: cover;
+}
+
+#fp-nav span{
+    background: white !important;
+}
+
+#app #main-navbar{
+    background-color: #111;
+}
