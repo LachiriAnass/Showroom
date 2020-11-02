@@ -4,14 +4,6 @@
   box-sizing: border-box;
 }
 
-.paintings {
-  height: 60%;
-  position: absolute;
-  top: 60%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-}
 
 .description {
   margin-top: 10%;

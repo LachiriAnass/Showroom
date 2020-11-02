@@ -1,4 +1,4 @@
-@extends('layouts.different_header')
+@extends('layouts.explore_and_search')
 
 @section('content')
 
@@ -64,7 +64,7 @@
             <div class="row no-gutters">
                 @forelse($most_rated_paintings as $painting)
                 <div class="col-md-3 painting-card">
-                    <div class="card" style="margin: auto;">
+                    <div class="card" style="margin: auto;;">
                         <img src="/storage/public/painting/{{ $painting->image }}" class="card-img-top card-painting-img" alt="{{ $painting->title }}">
                         <div class="card-body text-center">
                             <h5 class="card-title">{{ $painting->title }}</h5>
