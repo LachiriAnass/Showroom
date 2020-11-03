@@ -37,57 +37,57 @@
 .main-page-menu-buttons a:hover{
     border-bottom: 1px solid white;
 }
-  
-  .description {
-    margin-top: 10%;
-    width: 50%;
-    margin-left: 5%;
+
+.description {
+margin-top: 10%;
+width: 50%;
+margin-left: 5%;
+font-size: 20px;
+}
+
+.description p {
+margin: 50px 0px 10px 0px;
+}
+
+
+#pagepiling .section h1{
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 90px;
+    color: white !important;
+    margin-bottom: 150px;
+}
+
+.section .description{
+    margin-left: 150px;
+    color: white;
+    font-size: 30px;
+}
+
+.section .description button{
+    border: 1px solid white;
+    background: none;
+    color: white;
+    padding: 10px 20px;
     font-size: 20px;
-  }
-  
-  .description p {
-    margin: 50px 0px 10px 0px;
-  }
-    
-  
-  #fullPage .section h1{
-      font-family: Helvetica, sans-serif;
-      font-weight: bold;
-      text-align: center;
-      font-size: 90px;
-      color: white !important;
-      margin-bottom: 150px;
-  }
-  
-  .section .description{
-      margin-left: 150px;
-      color: white;
-      font-size: 30px;
-  }
-  
-  .section .description button{
-      border: 1px solid white;
-      background: none;
-      color: white;
-      padding: 10px 20px;
-      font-size: 20px;
-  }
-  .section .description button:hover{
-      cursor: pointer;
-      background: white;
-      color: black;
-  }
-  
-  .s1{
-      background-size: cover;
-  }
-  
-  .s2{
-      background-size: cover;
-  }
-  
-  .s3{
-      /*background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) );*/
-      background-size: cover;
-  }
-  
+}
+.section .description button:hover{
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+
+.s1{
+    background-size: cover;
+}
+
+.s2{
+    background-size: cover;
+}
+
+.s3{
+    /*background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) );*/
+    background-size: cover;
+}
+
