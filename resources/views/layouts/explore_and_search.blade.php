@@ -53,7 +53,7 @@
                             </form>
                         
                             @auth
-                            <a href="/create_gallery" class="btn btn-primary new_gallery">Upload</a>
+                            <a href="/create_gallery" class="new_gallery"><img src="imgs/up-arrow.png" style="padding:3px"/></a>
                             @endauth
                         @guest
                             <li class="nav-item">
@@ -67,7 +67,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                   <img class="profile-header-icon" src="/storage/public/profile/{{$artist->image}}" alt="your profile"/><span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -110,6 +110,8 @@
     					<h5 class="footer-titles">Follow Us</h5>
     					<div class="footer-links">
     						<a href="#"><img src="imgs/facebook.png"></a>
+                            <a href="#"><img src="imgs/instagram.png"></a>
+                            <a href="#"><img src="imgs/tik-tok.png"></a>
     						<a href="#"><img src="imgs/linkedin.png"></a>
     					</div>	
     				</div>

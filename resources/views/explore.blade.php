@@ -58,7 +58,7 @@
         <div class="tab-pane fade" id="rated-paintings" role="tabpanel" aria-labelledby="rated-paintings-tab">
             <div class="row no-gutters">
                 @forelse($most_rated_paintings as $painting)
-                <div class="col-md-3 image-container" style="border-image: url('imgs/border4.jpeg') 30 round;">
+                <div class="col-md-3 image-container" style="border-image: url('imgs/border.jpeg') 30 round;">
                     <article>
                         <a href="/painting/{{$painting->id}}">
                         <img src="/storage/public/painting/{{ $painting->image }}" class="card-img-top card-painting-img" alt="{{ $painting->title }}">
@@ -76,12 +76,19 @@
         <div class="tab-pane fade" id="rated-artists" role="tabpanel" aria-labelledby="rated-artists-tab">
             <div class="row no-gutters">
                 @forelse($most_rated_artists as $artist)
-                <div class="col-md-3 image-container">
-                    <article>
+                <div class="col-md-3">
+                <!--     <article>
                         <a href="/profile/{{$artist->id}}">
                         <img src="/storage/public/profile/{{ $artist->image }}" class="card-img-top card-painting-img" alt="{{ $artist->name }}">
                         </a>
-                    </article>
+                    </article> -->
+                    <div class="card">
+                            <img class="card-img-top" src="/storage/public/profile/{{ $artist->image }}" alt="{{ $artist->name }}" style="width:100%">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $artist->name }}</h5>
+                                <a href="/profile/{{$artist->id}}" class="btn btn-primary stretched-link">See Profile</a>
+                            </div>
+                    </div>
                 </div>
                 @empty
                 <div class="alert alert-primary text-center" role="alert" style="width:100%;margin-bottom: 50px;">

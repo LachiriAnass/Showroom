@@ -77,6 +77,23 @@ body {
 }
 
 
+.profile-header-icon {
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  background-color: #AAA;
+}
+
+
+.card {
+    width:200px;
+    background-color:transparent;
+    border:none;
+}
+
+.card h4, .card a {
+    margin-left: 20px;
+}
 
 /*@media only screen and (min-width: 768px) and (max-width: 991px){
     .md-mb-30{
