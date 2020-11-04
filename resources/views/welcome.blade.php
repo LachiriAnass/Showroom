@@ -40,26 +40,31 @@
             <a href="{{ route('register') }}">{{ __('Register') }}</a>
     </div>
 
-    <div class="section s1" style="background-image:  url('imgs/test1.jpg');">
+    <div class="section s1" id="sect1" style="background-image:  url('imgs/test1.jpg');">
         <h1>Showcase</h1>
         <div class="description">
             <p>Sell and showcase your paintings </p>
             <a href="{{ route('register') }}" ><button type="button">Get started</button></a>
         </div>
     </div>
-    <div class="section s2" style="background-image: url('imgs/section2.jpg');">
+    <div class="section s2" id="sect2" style="background-image: url('imgs/section2.jpg');">
         <h1>Discover</h1>
         <div class="description">
             <p>Discover new paintings to buy</p>
             <a href="/explore" ><button type="button">Explore</button></a>
         </div>
     </div>
-    <div class="section s3" style="background-image: url('imgs/section3.jpg');">
+    <div class="section s3" id="sect3" style="background-image: url('imgs/section3.jpg');">
         <h1>Upvote</h1>
         <div class="description">
             <p>Upvote your favorite paintings and artists</p>
         </div>
     </div>
+
+
+
+    <script src="{{ asset('js/smooth-scroll.polyfills.min.js') }}"></script>
+
 
 </body>
 </html>
