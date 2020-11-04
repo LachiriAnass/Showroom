@@ -20,29 +20,21 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style2.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/explore_and_search_styles.css') }}" rel="stylesheet">
 
 </head>
 <body>
-<div id="app">
     <div class=”main-container”>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
 
-                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
-                
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                	<a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="/imgs/paint.png" alt="Showroom" class="showroom-icon">
-                     <span id="site-title">Showroom</span>
-                    </a>
+                <a class="navbar-brand" href="{{ url('/') }}">
+                <img src="/imgs/paint.png" alt="Showroom" class="showroom-icon">
+                <span id="site-title">Showroom</span>
+                </a>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto " style="padding-right:20px;">
+                    <l class="navbar-nav ml-auto " style="padding-right:20px;">
                         <!-- Authentication Links -->
                             <form class="form-inline search-bar" action="/search" method="GET">
                                 <select name="category" class="category-filter custom-select">
@@ -65,22 +57,22 @@
                             @endauth
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link header-links " href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link " href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link header-links" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link " href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle header-links" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a href="/profile/{{ Auth::user()->id }}" class="dropdown-item header-links">My Profile</a>
-                                <a href="/galleries" class="dropdown-item header-links">My Galleries</a>
+                                <a href="/profile/{{ Auth::user()->id }}" class="dropdown-item">My Profile</a>
+                                <a href="/galleries" class="dropdown-item">My Galleries</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -94,7 +86,6 @@
                             </li>
                         @endguest
                     </ul>
-                </div>
             </div>
         </nav>
 
@@ -104,11 +95,11 @@
     </div>
 
 <footer>
-    	<div class="footer-top">
+    	<div class="footer">
     		<div class="container">
     			<div class="row">
     				<div class="col-md-4 col-sm-12">
-    					<h5>Contact</h5>
+    					<h5 class="footer-titles">Contact</h5>
     					<div class="footer-links">
     						<a href="#">Privacy Policy</a>
     						|
@@ -116,14 +107,14 @@
     					</div>
     				</div>
     				<div class="col-md-4 col-sm-12">
-    					<h5>Follow Us</h5>
+    					<h5 class="footer-titles">Follow Us</h5>
     					<div class="footer-links">
     						<a href="#"><img src="imgs/facebook.png"></a>
     						<a href="#"><img src="imgs/linkedin.png"></a>
     					</div>	
     				</div>
     				<div class="col-md-4 col-sm-12">
-    					<h5>About</h5>
+    					<h5 class="footer-titles">About</h5>
     					<p id="about-p">All Right reserved by &copy;Intellcap.2020</p>
     				</div>
 
@@ -131,8 +122,6 @@
     		</div>	
     	</div>
     </footer>
-</div>
-
 
 
 </body>
