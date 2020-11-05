@@ -34,7 +34,7 @@
                 </a>
 
                     <!-- Right Side Of Navbar -->
-                    <l class="navbar-nav ml-auto " style="padding-right:20px;">
+                    <ul class="navbar-nav ml-auto " style="padding-right:20px;">
                         <!-- Authentication Links -->
                             <form class="form-inline search-bar" action="/search" method="GET">
                                 <select name="category" class="category-filter custom-select">

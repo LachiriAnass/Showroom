@@ -82,7 +82,7 @@
                         <img src="/storage/public/profile/{{ $artist->image }}" class="card-img-top card-painting-img" alt="{{ $artist->name }}">
                         </a>
                     </article> -->
-                    <div class="card">
+                    <div class="card" style="width: 18rem; margin: auto;">
                             <img class="card-img-top" src="/storage/public/profile/{{ $artist->image }}" alt="{{ $artist->name }}" style="width:100%">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $artist->name }}</h5>
