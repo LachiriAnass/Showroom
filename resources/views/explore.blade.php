@@ -58,7 +58,7 @@
         <div class="tab-pane fade" id="rated-paintings" role="tabpanel" aria-labelledby="rated-paintings-tab">
             <div class="row no-gutters">
                 @forelse($most_rated_paintings as $painting)
-                <div class="col-md-3 image-container" style="border-image: url('imgs/border.jpeg') 30 round;">
+                <div class="col-md-3 image-container" style="border-image: url('imgs/border.jpeg') 20 round; position:absolute; z-index:1">
                     <article>
                         <a href="/painting/{{$painting->id}}">
                         <img src="/storage/public/painting/{{ $painting->image }}" class="card-img-top card-painting-img" alt="{{ $painting->title }}">

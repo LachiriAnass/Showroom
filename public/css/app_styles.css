@@ -14,14 +14,20 @@ html {
 body {
     background: linear-gradient(to top left, #6c655d, #fcfcf3);
     margin: 0 0 400px; 
+    
 }  
 
+
+.card-header {
+    font-size: 20px;
+}
 
 .image-container {
    /* margin-right: 10px; */
     border: 18px solid transparent;
     transition: transform .2s;
-    
+
+  
 }
 
 

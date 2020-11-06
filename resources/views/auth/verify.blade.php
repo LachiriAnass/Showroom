@@ -8,7 +8,7 @@
 
                 <div class="card-body">
 
-                     <div class="title">{{ __('Verify Your Email Address') }}</div>
+                     <div>{{ __('Verify Your Email Address') }}</div>
 
                     @if (session('resent'))
                         <div class="alert alert-success" role="alert">

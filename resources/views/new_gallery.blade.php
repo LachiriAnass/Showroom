@@ -1,13 +1,15 @@
-@extends('layouts.app')
+@extends('layouts.add_and_modify')
 
 @section('content')
 <div class="container margin-top-50">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card card-style">
-                <div class="card-header">New Gallery</div>
 
                 <div class="card-body">
+
+                <div class="title">New Gallery</div>
+
                     @if ($message = Session::get('success'))
                     <div class="form-group">
                         <div class="alert alert-success alert-block">

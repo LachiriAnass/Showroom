@@ -11,12 +11,12 @@ body {
 
 
 label {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .title {
   font-family: Poppins-Bold;
-  font-size: 39px;
+  font-size: 30px;
   color: #333333;
   line-height: 1.2;
   text-align: center;
@@ -26,7 +26,7 @@ label {
 
 .card {
     margin: 100px;
-    padding: 15px;
+    padding: 15px 15px 70px 15px;
     border-radius: 12px;
 }
 
@@ -39,4 +39,13 @@ label {
     font-size: 14px;
     text-transform: uppercase;
 }
+
+
+.profile-header-icon {
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    background-color: #AAA;
+}
+  
 
