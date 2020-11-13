@@ -29,7 +29,7 @@
             <div class="container">
 
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="/imgs/paint.png" alt="Showroom" class="showroom-icon">
+                <img src="{{ asset('/imgs/paint.png') }}" alt="Showroom" class="showroom-icon">
                 <span id="site-title">Showroom</span>
                 </a>
 
@@ -53,7 +53,7 @@
                             </form>
 
                             @auth
-                            <a href="/create_gallery" class="new_gallery"><img src="imgs/up-arrow.png" style="padding:3px"/></a>
+                            <a href="/create_gallery" class="new_gallery"><img src="{{ asset('imgs/up-arrow.png') }}" style="padding:3px"/></a>
                             @endauth
                         @guest
                             <li class="nav-item">
@@ -72,6 +72,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a href="/profile/{{ Auth::user()->id }}" class="dropdown-item">My Profile</a>
+                                <a href="/orders" class="dropdown-item">My Orders</a>
                                 <a href="/galleries" class="dropdown-item">My Galleries</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

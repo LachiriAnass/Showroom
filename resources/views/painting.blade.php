@@ -52,7 +52,7 @@
                         <!-- Button trigger modal -->
 
                         <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
-                            Buy The Painting
+                            Order Painting
                         </button>
 
                         <!-- Modal -->
@@ -60,14 +60,13 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Contact Informations</h5>
+                                <h5 class="modal-title" id="exampleModalLongTitle">Info</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                Price : {{ $painting->price }} $ <br>
-                                Email : {{ $painting->gallery->user->email }}
+                                You should Login before ordering paintings!
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -80,32 +79,14 @@
                     @else
                         @if(!(Auth::user()->id == $painting->gallery->user_id))
                         @if($painting->for_sale)
-                        <!-- Button trigger modal -->
 
-                        <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
-                            Buy The Painting
-                        </button>
+                        <button class="btn btn-primary float-right" style="margin-right: 20px;margin-left: 20px;"
+                                onclick="if(confirm('Are you sure?')){event.preventDefault();
+                                                        document.getElementById('painting-order-form').submit();}">Order Painting</button>
+                        <form id="painting-order-form" action="/checkout/{{ $painting->id }}" method="GET" style="display: none;">
+                                            @csrf
+                                        </form>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Contact Informations</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                Price : {{ $painting->price }} $ <br>
-                                Email : {{ $painting->gallery->user->email }}
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
                         @endif
 
                         @else
@@ -127,6 +108,17 @@
                                         </form>
                         @endif
                     @endguest
+
+                    @if ($message = Session::get('error'))
+                    <div class="form-group">
+                        <div class="alert alert-success alert-block">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>{{ session('error') }}</strong>
+                        </div>
+                    </div>
+                    @endif
+
+
                 </div>
             </div>
         </div>

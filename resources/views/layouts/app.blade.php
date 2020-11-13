@@ -84,8 +84,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a href="/profile/{{ Auth::user()->id }}" class="dropdown-item header-links">My Profile</a>
-                                <a href="/galleries" class="dropdown-item header-links">My Galleries</a>
+                                <a href="/profile/{{ Auth::user()->id }}" class="dropdown-item">My Profile</a>
+                                <a href="/orders" class="dropdown-item">My Orders</a>
+                                <a href="/galleries" class="dropdown-item">My Galleries</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

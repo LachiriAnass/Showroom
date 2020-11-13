@@ -38,6 +38,12 @@ Route::post('/create_painting', 'PaintingController@store')->middleware('auth');
 Route::post('/delete_painting/{painting_id}', 'PaintingController@destroy')->middleware('auth');
 Route::post('/sold_painting/{painting_id}', 'PaintingController@modify')->middleware('auth');
 
+
+Route::get('/checkout/{id}', 'CheckoutController@show')->middleware('auth');
+Route::post('/order','OrderController@create')->middleware('auth');
+Route::get('/orders', 'OrderController@index')->middleware('auth');
+
+
 Route::get('/profile/{user_id}', 'ProfileController@show');
 Route::get('/modify_profile/{user_id}', 'ProfileController@modifyProfile');
 Route::post('/modify_profile/{user_id}', 'ProfileController@update')->middleware('auth');
