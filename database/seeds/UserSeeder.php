@@ -141,5 +141,15 @@ class UserSeeder extends Seeder
                     'updated_at' => null,
                 ]);
         endfor;
+
+        DB::table('users')->insert([
+            'name' => "admin",
+            'email' => "admin@gmail.com",
+            'password' => Hash::make('admin'),
+            'is_admin' => true,
+            'votes_average' => 0,
+            'created_at' => new DateTime,
+            'updated_at' => null,
+        ]);
     }
 }

@@ -44,6 +44,22 @@ Route::post('/order','OrderController@create')->middleware('auth');
 Route::get('/orders', 'OrderController@index')->middleware('auth');
 
 
+route::get('/admin','AdminController@index')->middleware('auth');
+route::get('/admin/galleries','AdminController@galleriesIndex')->middleware('auth');
+route::get('/admin/paintings','AdminController@paintingsIndex')->middleware('auth');
+route::get('/admin/orders','AdminController@ordersIndex')->middleware('auth');
+route::get('/admin/users','AdminController@usersIndex')->middleware('auth');
+
+route::post('/delete/painting/{id}', 'AdminController@destroyPainting')->middleware('auth');
+route::post('/delete/gallery/{id}', 'AdminController@destroyGallery')->middleware('auth');
+
+route::post('/permission/user/{id}', 'AdminController@permissionUser')->middleware('auth');
+route::post('/delete/user/{id}', 'AdminController@destroyUser')->middleware('auth');
+
+route::get('/admin/order/{id}', 'AdminController@orderIndex')->middleware('auth');
+route::post('/delete/order/{id}', 'AdminController@orderDeliver')->middleware('auth');
+
+
 Route::get('/profile/{user_id}', 'ProfileController@show');
 Route::get('/modify_profile/{user_id}', 'ProfileController@modifyProfile');
 Route::post('/modify_profile/{user_id}', 'ProfileController@update')->middleware('auth');

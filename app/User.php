@@ -54,4 +54,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\ProfileVote');
     }
+
+    public function isAdmin()
+    {
+        return $this->is_admin; // this looks for an admin column in your users table
+    }
 }

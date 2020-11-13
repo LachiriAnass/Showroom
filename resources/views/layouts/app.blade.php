@@ -84,6 +84,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                @if( Auth::user()->is_admin )
+                                <a href="/admin" class="dropdown-item">Admin Dashboard</a>
+                                @endif
                                 <a href="/profile/{{ Auth::user()->id }}" class="dropdown-item">My Profile</a>
                                 <a href="/orders" class="dropdown-item">My Orders</a>
                                 <a href="/galleries" class="dropdown-item">My Galleries</a>
