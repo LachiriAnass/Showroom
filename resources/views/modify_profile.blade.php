@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.add_and_modify')
 
 @section('content')
 <div class="container profile-container" style="margin-top: 120px;">

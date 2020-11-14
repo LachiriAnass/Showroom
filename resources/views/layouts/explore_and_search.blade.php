@@ -20,7 +20,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/explore_and_search_styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app_styles.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -34,7 +34,7 @@
                 </a>
 
                     <!-- Right Side Of Navbar -->
-                    <l class="navbar-nav ml-auto " style="padding-right:20px;">
+                    <ul class="navbar-nav ml-auto " style="padding-right:20px;">
                         <!-- Authentication Links -->
                             <form class="form-inline search-bar" action="/search" method="GET">
                                 <select name="category" class="category-filter custom-select">

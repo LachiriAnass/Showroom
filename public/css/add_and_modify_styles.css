@@ -1,0 +1,51 @@
+*{
+    margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    background: linear-gradient(to top left, #6c655d, #fcfcf3);
+} 
+
+
+label {
+    font-size: 18px;
+}
+
+.title {
+  font-family: Poppins-Bold;
+  font-size: 30px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+
+.card {
+    margin: 100px;
+    padding: 15px 15px 70px 15px;
+    border-radius: 12px;
+}
+
+#site-title{
+    font-family: Poppins-Bold, sans-serif;
+    font-size: 25px;
+}
+
+.nav-link {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+.profile-header-icon {
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    background-color: #AAA;
+}
+  
+

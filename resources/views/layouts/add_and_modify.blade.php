@@ -20,25 +20,24 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/app_styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/add_and_modify_styles.css') }}" rel="stylesheet">
 
 </head>
 <body>
 <div id="app">
     <div class=”main-container”>
+        
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
 
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('imgs/paint.png') }}" alt="Showroom" class="showroom-icon">
+                <img src="/imgs/paint.png" alt="Showroom" class="showroom-icon">
                 <span id="site-title">Showroom</span>
                 </a>
-
 
                 <ul class="navbar-nav mr-auto">
                         <a href="/explore" class="nav-link">Explore</a>
                 </ul>
-
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto " style="padding-right:20px;">
@@ -60,7 +59,7 @@
                             </form>
 
                             @auth
-                            <a href="/create_gallery" class="new_gallery"><img src="{{ asset('imgs/up-arrow.png') }}" style="padding:3px"/></a>
+                            <a href="/create_gallery" class="new_gallery"><img src="imgs/up-arrow.png" style="padding:3px"/></a>
                             @endauth
                         @guest
                             <li class="nav-item">
@@ -78,11 +77,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                @if( Auth::user()->is_admin )
-                                <a href="/admin" class="dropdown-item">Admin Dashboard</a>
-                                @endif
                                 <a href="/profile/{{ Auth::user()->id }}" class="dropdown-item">My Profile</a>
-                                <a href="/orders" class="dropdown-item">My Orders</a>
                                 <a href="/galleries" class="dropdown-item">My Galleries</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -104,40 +99,6 @@
             @yield('content')
         </main>
     </div>
-
-
-    <footer>
-    	<div class="footer">
-    		<div class="container">
-    			<div class="row">
-    				<div class="col-md-4 col-sm-12">
-    					<h5 class="footer-titles">Contact</h5>
-    					<div class="footer-links">
-    						<a href="#">Privacy Policy</a>
-    						|
-    						<a href="mailto:i.ilali@intellcap.lu">Email Us</a>
-    					</div>
-    				</div>
-    				<div class="col-md-4 col-sm-12">
-    					<h5 class="footer-titles">Follow Us</h5>
-    					<div class="footer-links">
-    						<a href="#"><img src="imgs/facebook.png"></a>
-                            <a href="#"><img src="imgs/instagram.png"></a>
-                            <a href="#"><img src="imgs/tik-tok.png"></a>
-    						<a href="#"><img src="imgs/linkedin.png"></a>
-    					</div>
-    				</div>
-    				<div class="col-md-4 col-sm-12">
-    					<h5 class="footer-titles">About</h5>
-    					<p id="about-p">All Right reserved by &copy;Intellcap.2020</p>
-    				</div>
-
-    			</div>
-    		</div>
-    	</div>
-    </footer>
-</div>
-
 
 
 </body>

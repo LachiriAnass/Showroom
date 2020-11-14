@@ -14,13 +14,20 @@ html {
 body {
     background: linear-gradient(to top left, #6c655d, #fcfcf3);
     margin: 0 0 400px; 
+    
 }  
 
+
+.card-header {
+    font-size: 20px;
+}
 
 .image-container {
    /* margin-right: 10px; */
     border: 18px solid transparent;
     transition: transform .2s;
+
+  
 }
 
 
@@ -86,14 +93,14 @@ body {
 
 
 .card {
-    width:200px;
+    margin-right: 10px;
     background-color:transparent;
     border:none;
 }
 
-.card h4, .card a {
+/* .card h4, .card a {
     margin-left: 20px;
-}
+}  */
 
 /*@media only screen and (min-width: 768px) and (max-width: 991px){
     .md-mb-30{
