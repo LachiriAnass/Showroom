@@ -60,10 +60,10 @@
 <hr>
 <div class="row admin-order">
     <div class="col-md-1">{{ $info['id'] }}</div>
-    <div class="col-md-4"><a href="/painting/{{ $info['product_id'] }}">{{$info['product_name']}}</a></div>
-    <div class="col-md-2"><a href="/profile/{{ $info['user_id'] }}">{{$info['user_name']}}</a></div>
-    <div class="col-md-2"><a href="/profile/{{ $info['artist_id'] }}">{{$info['artist_name']}}</a></div>
-    <div class="col-md-2">
+    <div class="col-md-4"><a href="/painting/{{ $info['product_id'] }}" style="font-size: 16px;">{{$info['product_name']}}</a></div>
+    <div class="col-md-2"><a href="/profile/{{ $info['user_id'] }}" style="font-size: 16px;">{{$info['user_name']}}</a></div>
+    <div class="col-md-2"><a href="/profile/{{ $info['artist_id'] }}" style="font-size: 16px;">{{$info['artist_name']}}</a></div>
+    <div class="col-md-2" style="font-size: 16px;">
         @if ($info['is_delivered'])
         Delivred
         @else

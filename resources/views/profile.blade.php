@@ -14,7 +14,7 @@
                 <span class="bio-section">{{ $user->bio }}</span>
                 @auth
                 @if(Auth::user()->id == $user->id)
-                    <a href="/modify_profile/{{ $user->id }}">Modify</a>
+                    <a href="/modify_profile/{{ $user->id }}" style="font-size: 16px;">Modify</a>
                 @endif
                 @endauth
                 </div>

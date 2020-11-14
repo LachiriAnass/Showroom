@@ -22,14 +22,11 @@
                 <div class="row no-gutters">
                     @forelse($galleries as $gallery)
                     <div class="col-md-3 image-container">
-                        <div class="card" >
-                            <div class="card-body text-center">
-                                <a href="/gallery/{{$gallery->id}}">
-                                <img src="/storage/public/gallery/{{ $gallery->image }}" class="card-img-top card-painting-img" alt="{{ $gallery->title }}">
-                                </a>
-                                <h5 class="card-title">{{ $gallery->title }}</h5>
-                            </div>
-                        </div>
+                        <article>
+                            <a href="/gallery/{{$gallery->id}}"> 
+                            <img src="/storage/public/gallery/{{ $gallery->image }}" class="card-img-top card-painting-img" alt="{{ $gallery->title }}">
+                            </a> 
+                        </article>
                     </div>
                     @empty
                     <div class="alert alert-primary text-center" role="alert" style="width:100%;margin-top: 50px;">
@@ -42,14 +39,11 @@
                 <div class="row no-gutters justify-content-center">
                     @forelse($paintings as $painting)
                     <div class="col-md-3 image-container">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <a href="/painting/{{$painting->id}}">
-                                <img src="/storage/public/painting/{{ $painting->image }}" class="card-img-top card-painting-img" alt="{{ $painting->title }}">
-                                </a>
-                                <h5 class="card-title">{{ $painting->title }}</h5>
-                            </div>
-                        </div>
+                    <article>
+                        <a href="/painting/{{$painting->id}}">
+                        <img src="/storage/public/painting/{{ $painting->image }}" class="card-img-top card-painting-img" alt="{{ $painting->title }}">
+                        </a>
+                    </article>
                     </div>
                     @empty
                     <div class="alert alert-primary text-center" role="alert" style="width:100%;margin-top: 50px;">
@@ -83,15 +77,12 @@
         @elseif($category == 'painting')
             <div class="row">
                 @forelse($paintings as $painting)
-                <div class="col-md-4 image-container">
-                    <div class="card" style="width: 18rem; margin: auto;">
-                        <div class="card-body text-center">
-                            <a href="/painting/{{$painting->id}}" class="btn btn-primary">
-                                <img src="/storage/public/painting/{{ $painting->image }}" class="card-img-top card-painting-img" alt="{{ $painting->title }}">
-                            </a>
-                            <h5 class="card-title">{{ $painting->title }}</h5>
-                        </div>
-                    </div>
+                <div class="col-md-3 image-container">
+                    <article>
+                        <a href="/painting/{{$painting->id}}">
+                        <img src="/storage/public/painting/{{ $painting->image }}" class="card-img-top card-painting-img" alt="{{ $painting->title }}">
+                        </a>
+                    </article>
                 </div>
                 @empty
                 <div class="alert alert-primary text-center" role="alert" style="width:100%;margin-top: 50px;">
@@ -107,15 +98,12 @@
         @elseif($category == 'gallery')
             <div class="row">
                 @forelse($galleries as $gallery)
-                <div class="col-md-4 image-container">
-                    <div class="card" style="width: 18rem; margin: auto;">
-                        <div class="card-body text-center">
-                            <a href="/gallery/{{$gallery->id}}" class="btn btn-primary">
-                            <img src="/storage/public/gallery/{{ $gallery->image }}" class="card-img-top card-painting-img" alt="{{ $gallery->title }}">
-                           </a>
-                           <h5 class="card-title">{{ $gallery->title }}</h5>
-                        </div>
-                    </div>
+                <div class="col-md-3 image-container">
+                    <article>
+                        <a href="/gallery/{{$gallery->id}}"> 
+                        <img src="/storage/public/gallery/{{ $gallery->image }}" class="card-img-top card-painting-img" alt="{{ $gallery->title }}">
+                        </a> 
+                    </article>
                 </div>
                 @empty
                 <div class="alert alert-primary text-center" role="alert" style="width:100%;margin-top: 50px;">
@@ -133,7 +121,7 @@
                 <div class="col-md-4 image-container">
                     <div class="card" style="width: 18rem; margin: auto;">
                         <div class="card-body text-center">
-                            <a href="/profile/{{$artist->id}}" class="btn btn-primary">
+                            <a href="/profile/{{$artist->id}}">
                             <img src="/storage/public/profile/{{ $artist->image }}" class="card-img-top card-painting-img" alt="{{ $artist->name }}">
                             </a>
                             <h5 class="card-title">{{ $artist->name }}</h5>

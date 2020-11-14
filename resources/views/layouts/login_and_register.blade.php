@@ -29,7 +29,7 @@
             <div class="container">
 
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="/imgs/paint.png" alt="Showroom" class="showroom-icon">
+                <img src="{{ asset('/imgs/paint.png') }}" alt="Showroom" class="showroom-icon">
                 <span id="site-title">Showroom</span>
                 </a>
 

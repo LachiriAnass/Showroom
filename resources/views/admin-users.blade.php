@@ -65,10 +65,10 @@
 @foreach($users as $user)
 @if($user->id != Auth::id())
 <hr><div class="row admin-user">
-    <div class="col-md-1">{{ $user->id }}</div>
-    <div class="col-md-4">{{ $user->email }}</div>
-    <div class="col-md-3">{{ $user->name }}</div>
-    <div class="col-md-2">
+    <div class="col-md-1" style="font-size: 16px;">{{ $user->id }}</div>
+    <div class="col-md-4" style="font-size: 16px;">{{ $user->email }}</div>
+    <div class="col-md-3" style="font-size: 16px;">{{ $user->name }}</div>
+    <div class="col-md-2" style="font-size: 16px;">
         @if ($user->is_admin)
         Admin
         @else

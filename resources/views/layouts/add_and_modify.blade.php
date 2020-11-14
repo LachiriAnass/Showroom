@@ -31,7 +31,7 @@
             <div class="container">
 
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="/imgs/paint.png" alt="Showroom" class="showroom-icon">
+                <img src="{{ asset('/imgs/paint.png') }}" alt="Showroom" class="showroom-icon">
                 <span id="site-title">Showroom</span>
                 </a>
 
@@ -71,13 +71,17 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                    <img class="profile-header-icon" src="/storage/public/profile/{{Auth::user()->image}}" alt="your profile"/><span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                @if( Auth::user()->is_admin )
+                                <a href="/admin" class="dropdown-item">Admin Dashboard</a>
+                                @endif
                                 <a href="/profile/{{ Auth::user()->id }}" class="dropdown-item">My Profile</a>
+                                <a href="/orders" class="dropdown-item">My Orders</a>
                                 <a href="/galleries" class="dropdown-item">My Galleries</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

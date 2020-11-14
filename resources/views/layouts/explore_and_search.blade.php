@@ -113,15 +113,15 @@
     				<div class="col-md-4 col-sm-12">
     					<h5 class="footer-titles">Follow Us</h5>
     					<div class="footer-links">
-    						<a href="#"><img src="imgs/facebook.png"></a>
-                            <a href="#"><img src="imgs/instagram.png"></a>
-                            <a href="#"><img src="imgs/tik-tok.png"></a>
-    						<a href="#"><img src="imgs/linkedin.png"></a>
+                            <a href="#"><img src="{{ asset('imgs/facebook.png') }}"></a>
+                            <a href="#"><img src="{{ asset('imgs/instagram.png') }}"></a>
+                            <a href="#"><img src="{{ asset('imgs/tik-tok.png') }}"></a>
+    						<a href="#"><img src="{{ asset('imgs/linkedin.png') }}"></a>
     					</div>
     				</div>
     				<div class="col-md-4 col-sm-12">
     					<h5 class="footer-titles">About</h5>
-    					<p id="about-p">All Right reserved by &copy;Intellcap.2020</p>
+    					<p id="about-p">All Rights reserved by &copy;Intellcap.2020</p>
     				</div>
 
     			</div>

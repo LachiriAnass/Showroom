@@ -12,7 +12,7 @@ html {
 
 
 body {
-    background: linear-gradient(to top left, #6c655d, #fcfcf3);
+    background: linear-gradient(to top left, #cecece, #fcfcf3);
     margin: 0 0 400px; 
     
 }  
@@ -94,8 +94,18 @@ body {
 
 .card {
     margin-right: 10px;
-    background-color:transparent;
-    border:none;
+    /* background-color:transparent;
+    border:none; */
+}
+
+
+a {
+    color: #5500ff;
+}
+
+
+.gallery-description, .painting-description {
+    font-size: 17px;
 }
 
 /* .card h4, .card a {
